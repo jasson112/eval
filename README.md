@@ -1,5 +1,8 @@
 # Voxie Developer Eval
 
+What's Here
+-----------
+This repo contains work that was previously produced in response to the Task definition below.  The goal of this evaluation excercise is to validate how well the develop satisfied the requirements of the excercise.  Read the task definition, attempt to run the code, and then perform a code review.
 
 Task Definition
 ---------------
