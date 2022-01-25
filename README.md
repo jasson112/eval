@@ -1,7 +1,8 @@
-# eval
+# Voxie Developer Eval
 
-A developer was given the following task
----------------------------------------
+
+Task Definition
+---------------
 
 Given a table that has the following fields for contacts (named fields below) - build a Laravel app that will take an uploaded CSV file, read out the columns, and allow the user to map their CSV's columns to the table's fields. Once done import the file into the contacts table.
 
@@ -39,6 +40,7 @@ Armed with this description, they produced the code under the 'webapp' directory
 
 Please return a description of:
 1. What needed to be fixed, if anything. 
+2. Whether or not the developer succeeded in satifying the requirements of the task.
 2. Your code review comments.
 
 The thoughtfulness and thoroughness of the reivew and analysis will be used as evaluation criteria for your employment at Voxie.
