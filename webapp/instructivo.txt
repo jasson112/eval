@@ -1,0 +1,12 @@
+DESPUES DE HABER REALIZADO EL CLONE DE ESTE PROYECTO EN LA RAIZ DEL SERVIDOR SEGUIR LOS SIGUIENTES PASOS:
+
+Ejecutar los siguientes comandos en la consola:
+
+1) cp .env.example .env
+2) composer update && npm install
+3) php artisan migrate --seed
+4) php artisan storage:link
+
+AVISO:
+
+Editar el archivo .env e integrar las credenciales de las bases de datos antes de ejecutar el punto 3
