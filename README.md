@@ -29,10 +29,18 @@ CREATE TABLE custom_attributes (
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 256 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
-Armed with this description, the produced the code under the 'webapp' directory.  The task at hand is to:
-1.  Download the repo and confirm that the code is working.
-2.  If the code is not working, attempt to fix it.
-3.  Perform a code review on the repo as though this was produced by one of your work colleagues.
+Work Product
+------------
 
-Please return a description of what needed to be fixed, if anything, in addition to your code review comments.
-The thoughtfullness and thoroughness of the reivew and analysis will be used as evaluation criteria for your employment at Voxie.
+Armed with this description, they produced the code under the 'webapp' directory.  The task at hand is to:
+1.  Download the repo and confirm that the code is working. Does it satisfy the requirements?
+2.  If the code is not working, attempt to fix it.
+3.  Perform a code review on the repo as though it was produced by one of your work colleagues.
+
+Please return a description of:
+1. What needed to be fixed, if anything. 
+2. Your code review comments.
+
+The thoughtfulness and thoroughness of the reivew and analysis will be used as evaluation criteria for your employment at Voxie.
+
+Good Luck!
