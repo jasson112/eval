@@ -41,10 +41,12 @@ Armed with this description, they produced the code under the 'webapp' directory
 2.  If the code is not working, attempt to fix it.
 3.  Perform a code review on the repo as though it was produced by one of your work colleagues.
 
-Please return a description of:
+Please write a description in a text file of:
 1. What needed to be fixed, if anything. 
 2. Whether or not the developer succeeded in satifying the requirements of the task.
 2. Your code review comments.
+
+Send your file and your CV to coding-evals@voxie.com
 
 The thoughtfulness and thoroughness of the reivew and analysis will be used as evaluation criteria for your employment at Voxie.
 
