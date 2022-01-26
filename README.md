@@ -13,6 +13,7 @@ Any fields that are not mapped, import into a separate custom_attributes table w
 
 Here is the SQL to create the contacts and custom_attributes tables for reference.
 
+```SQL
 CREATE TABLE contacts (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `team_id` int(10) unsigned NOT NULL,
@@ -32,6 +33,7 @@ CREATE TABLE custom_attributes (
   `value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 256 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+```
 
 Work Product
 ------------
