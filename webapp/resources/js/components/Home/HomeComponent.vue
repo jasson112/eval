@@ -95,7 +95,7 @@ import Resources from './resources';
 
 var homeComponent = {
     name: 'HomeComponent',
-    
+
     data() {
         return {
             isUploaderActive: true,
@@ -109,34 +109,34 @@ var homeComponent = {
     methods: {
         selectFile() {
             const validation = validateFile(this.$refs.uploader);
-            
+
             if (! validation.success) {
                 this.$refs.uploader.value = null;
                 alert(validation.message);
             }
-            
+
             let contacts = [];
             var reader = new FileReader();
 
             reader.onload = (event) => {
                 let lines  = event.target.result.split('\n');
                 let columns = [];
-                
+
                 for (let i = 0; i < lines.length; i++) {
                     if (lines[i].length) {
                         columns = lines[i].split(',');
-                        
+
                         let jsObj = {};
 
-                        for (let j = 1; j < columns.length; j++) {
-                            jsObj[`column-${j}`] = columns[j];
+                        for (let j = 0; j < columns.length; j++) {
+                            jsObj[`column-${j+1}`] = columns[j];
                         }
-                        
+
                         contacts.push(jsObj);
                     }
                 }
             }
-            
+
             reader.readAsText(this.$refs.uploader.files[0]);
 
             reader.onloadend = () => {
@@ -162,6 +162,7 @@ var homeComponent = {
             });
         },
 
+
         importData() {
             let columns = {};
 
@@ -174,7 +175,7 @@ var homeComponent = {
             }
 
             console.log(this.contacts, columns);
-            
+
             this.axios.post('/import', {
                 contacts: this.contacts,
                 columns: columns

@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller as Controller;
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
-use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    
+
     public function index()
     {
         //
     }
-    
+
     public function store(ContactRequest $request)
     {
         $parameters = $request->validated();
@@ -21,23 +21,15 @@ class ContactController extends Controller
         $contacts = [];
 
         foreach ($parameters['contacts'] as $keyContact => $contact) {
-
-            $columnsNames = [];
-
             foreach ($parameters['columns'] as $keyColumn => $column) {
-                $columnsNames[] = $column['column-'.($keyColumn + 1)];
-            }
-
-            foreach ($columnsNames as $keyColumnName => $columnName) {
-                $contacts[$keyContact][$columnName] = $contact[$keyColumnName];
+                $contacts[$keyContact][$column] = $contact[$keyColumn];
             }
         }
-
-        $contact = Contact::create($contacts);
+        Contact::insert($contacts);
 
         return response()->json([
             'success' => true
         ]);
     }
-    
+
 }

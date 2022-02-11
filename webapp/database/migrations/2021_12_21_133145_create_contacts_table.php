@@ -15,15 +15,15 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('team_id');
-            $table->string('name')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
+            $table->integer('team_id')->unsigned();
+            $table->string('name')->collation('utf8mb4_unicode_ci')->nullable();
+            $table->string('phone')->nullable(false);
+            $table->string('email')->collation('utf8mb4_unicode_ci')->nullable();
             $table->integer('sticky_phone_number_id')->nullable();
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      *

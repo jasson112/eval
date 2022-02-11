@@ -5,7 +5,7 @@ import NavBarComponent from './components/NavBar/NavBarComponent'
 import MainMenuComponent from './components/MainMenu/MainMenuComponent'
 import HomeComponent from './components/Home/HomeComponent'
 
-Vue.use(axios)
+
 
 const app = new Vue({
 
@@ -22,5 +22,8 @@ const app = new Vue({
     mounted() { }
 
 }).$mount("#app");
+
+//app.use(axios)
+Vue.prototype.axios = axios;
 
 export default app;
